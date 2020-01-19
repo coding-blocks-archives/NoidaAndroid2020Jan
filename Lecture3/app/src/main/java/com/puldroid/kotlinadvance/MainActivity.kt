@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         button.setOnClickListener {
-            showToast(getValue.text.toString().toVowel())
+            showToast(editText.text.toString().toVowel())
         }
 
         showToast("Pulkit".toVowel())
