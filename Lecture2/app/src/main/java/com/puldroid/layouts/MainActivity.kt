@@ -11,7 +11,78 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     var player = false
     var turnCount = 0
+    var boardStatus = Array(3) { IntArray(3) }
+    var buttonArray = arrayOf<Array<Button>>()
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        buttonArray = arrayOf(
+            arrayOf(btn1, btn2, btn3),
+            arrayOf(btn4, btn5, btn6),
+            arrayOf(btn7, btn8, btn9)
+        )
+        for (i in buttonArray) {
+            for (j in i) {
+                j.setOnClickListener(this)
+            }
+        }
+        //Java
+//        val button1  = findViewById<Button>(R.id.btn1)
+        btn1.text = "Pulkit"
+//        btn1.setOnClickListener {
+//        }
+//        btn1.setOnClickListener(this)
+//        btn2.setOnClickListener(this)
+        intialize()
+        resetBtn.setOnClickListener {
+            intialize()
+        }
+        Log.i("Lifecycle", "On Create Called")
+    }
+
+    private fun intialize() {
+        for (i in buttonArray) {
+            for (j in i) {
+                j.isEnabled = true
+                j.text = ""
+            }
+        }
+        for (i in 0..2) {
+            for (j in 0..2) {
+                boardStatus[i][j] = -1
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("Lifecycle", "On Start Called")
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("Lifecycle", "On Resume Called")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("Lifecycle", "On Pause Called")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("Lifecycle", "On Stop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("Lifecycle", "On Destroy Called")
+
+    }
     override fun onClick(v: View) {
         player = !player
         when (v.id) {
@@ -119,78 +190,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    var boardStatus = Array(3) { IntArray(3) }
-    var buttonArray = arrayOf<Array<Button>>()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        buttonArray = arrayOf(
-            arrayOf(btn1, btn2, btn3),
-            arrayOf(btn4, btn5, btn6),
-            arrayOf(btn7, btn8, btn9)
-        )
-        for (i in buttonArray) {
-            for (j in i) {
-                j.setOnClickListener(this)
-            }
-        }
-        //Java
-//        val button1  = findViewById<Button>(R.id.btn1)
-        btn1.text = "Pulkit"
-//        btn1.setOnClickListener {
-//        }
-//        btn1.setOnClickListener(this)
-//        btn2.setOnClickListener(this)
-        intialize()
-        resetBtn.setOnClickListener {
-            intialize()
-        }
-        Log.i("Lifecycle", "On Create Called")
-    }
-
-    private fun intialize() {
-        for (i in buttonArray) {
-            for (j in i) {
-                j.isEnabled = true
-                j.text = ""
-            }
-        }
-        for (i in 0..2) {
-            for (j in 0..2) {
-                boardStatus[i][j] = -1
-            }
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.i("Lifecycle", "On Start Called")
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.i("Lifecycle", "On Resume Called")
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.i("Lifecycle", "On Pause Called")
-
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i("Lifecycle", "On Stop Called")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i("Lifecycle", "On Destroy Called")
-
-    }
 
 
 }
