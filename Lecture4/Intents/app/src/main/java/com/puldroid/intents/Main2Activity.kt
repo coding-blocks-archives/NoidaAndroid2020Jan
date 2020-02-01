@@ -21,15 +21,14 @@ class Main2Activity : AppCompatActivity() {
         button.setOnClickListener {
             i.action = Intent.ACTION_VIEW
             i.data = Uri.parse("http://" + editText.text.toString())
-            startActivity(i)
+            startActivity(Intent.createChooser(i, "Open browser..."));
+
 
         }
 
         button2.setOnClickListener {
             i.action = Intent.ACTION_DIAL
             i.data = Uri.parse("tel:" + editText.text.toString())
-            startActivity(i)
-
         }
 
         button3.setOnClickListener {
