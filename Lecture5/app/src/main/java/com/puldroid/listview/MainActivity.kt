@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val movies = listOf<String>("Iron Man","Hulk","Thor","Captain America","Black Panther")
+    val movies = listOf<String>("Iron Man","Hulk","Thor","Captain America","Black Panther","Iron Man","Hulk","Thor","Captain America","Black Panther","Iron Man","Hulk","Thor","Captain America","Black Panther","Iron Man","Hulk","Thor","Captain America","Black Panther")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,3 +17,10 @@ class MainActivity : AppCompatActivity() {
             ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,movies)
     }
 }
+
+ class Movie(
+    val name:String,
+    val actorName:String,
+    val year:String,
+    val image:Int
+)
