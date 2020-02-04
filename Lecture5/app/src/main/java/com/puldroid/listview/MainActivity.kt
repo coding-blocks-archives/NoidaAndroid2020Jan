@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        for (i in 0..100) {
+        for (i in 0..10000000) {
             val random = Random().nextInt(6)
             val movie = Movie(
                 movies[random],
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
 class MovieAdapter(val movies:ArrayList<Movie>) :  BaseAdapter(){
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view = LayoutInflater.from(parent.context).inflate(
+        val view = convertView?:LayoutInflater.from(parent.context).inflate(
             R.layout.item_movie,parent,false
         )
         view.textView.text = movies[position].name + "(${movies[position].year})"
