@@ -1,9 +1,10 @@
 package com.puldroid.sharedprefs
 
 import android.content.Context
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        count = prefs.getInt("Count",0)
-        edtv.setText(prefs.getString("Name",""))
+        count = prefs.getInt("Count", 0)
+        edtv.setText(prefs.getString("Name", ""))
 
 
         textView.append("$count")
@@ -25,13 +26,20 @@ class MainActivity : AppCompatActivity() {
 
         updateBtn.setOnClickListener {
 
-            prefs.edit().apply{
-                putString("Name",edtv.text.toString()).apply()
-                putInt("Count",++count).apply()
+//            Snackbar.make(root, "Update Preferences", Snackbar.LENGTH_LONG).show()
+            root.snackbar("Update Preferences",Snackbar.LENGTH_LONG)
+
+            prefs.edit().apply {
+                putString("Name", edtv.text.toString()).apply()
+                putInt("Count", ++count).apply()
             }
 
             textView.text = "Count ${count}"
 
         }
     }
+}
+
+fun View.snackbar(message: String,duartion:Int) {
+    Snackbar.make(this, message, duartion).show()
 }
