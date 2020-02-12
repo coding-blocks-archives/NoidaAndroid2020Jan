@@ -2,6 +2,7 @@ package com.puldroid.roomdb
 
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     val list = arrayListOf<User>()
     val adapter = UserAdapter(list)
     val dataAdded = MutableLiveData<Boolean>()
+    val msg = MutableLiveData<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,12 @@ class MainActivity : AppCompatActivity() {
             Handler().postDelayed({
                 dataAdded.value = false
             }, 4000)
+        })
+
+        msg.observe(this, Observer {
+            if(!it.isNullOrEmpty()){
+                Toast.makeText(this,it,Toast.LENGTH_SHORT).show()
+            }
         })
 
 
@@ -50,7 +58,19 @@ class MainActivity : AppCompatActivity() {
                             isActive = true
                     )
             )
-            dataAdded.value = true
+            msg.value = "Button 1 Clicked"
+        }
+
+        btn2.setOnClickListener {
+            msg.value = "Button 2 Clicked"
+        }
+
+        btn3.setOnClickListener {
+            msg.value = "Button 3 Clicked"
+        }
+
+        btn4.setOnClickListener {
+            msg.value = "Button 4 Clicked"
         }
 
         userRv.apply {
