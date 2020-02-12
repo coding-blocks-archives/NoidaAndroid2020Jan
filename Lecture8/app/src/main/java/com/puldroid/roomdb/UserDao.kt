@@ -13,7 +13,7 @@ import androidx.room.Query
 interface UserDao {
 
     @Insert
-    fun addUser(user: User): Long
+  suspend  fun addUser(user: User): Long
 
     @Query("SELECT * FROM User")
     fun getAllUsers():LiveData<List<User>>

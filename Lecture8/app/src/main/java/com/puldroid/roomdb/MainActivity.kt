@@ -9,15 +9,18 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
 
     val db by lazy {
         Room.databaseBuilder(this, AppDatabase::class.java, "room.db")
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build()
+            .fallbackToDestructiveMigration()
+            .build()
     }
     val list = arrayListOf<User>()
     val adapter = UserAdapter(list)
@@ -37,8 +40,8 @@ class MainActivity : AppCompatActivity() {
         })
 
         msg.observe(this, Observer {
-            if(!it.isNullOrEmpty()){
-                Toast.makeText(this,it,Toast.LENGTH_SHORT).show()
+            if (!it.isNullOrEmpty()) {
+                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -51,14 +54,20 @@ class MainActivity : AppCompatActivity() {
 
 
         btn.setOnClickListener {
-            db.userDao().addUser(
-                    User(
+            GlobalScope.launch {
+                val a = withContext(Dispatchers.IO) {
+                    db.userDao().addUser(
+                        User(
                             name = editText.text.toString(),
                             age = editText.text.length * 10,
                             isActive = true
+                        )
                     )
-            )
-            msg.value = "Button 1 Clicked"
+                }
+                msg.value = "Button 1 Clicked with id $a"
+
+            }
+
         }
 
         btn2.setOnClickListener {
