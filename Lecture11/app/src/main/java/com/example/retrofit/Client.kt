@@ -8,11 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Client {
 
-    private val gson: Gson = GsonBuilder()
+     val gson: Gson = GsonBuilder()
         .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
         .create()
 
-    private val retrofit = Retrofit.Builder()
+     val retrofit = Retrofit.Builder()
         .baseUrl("https://api.github.com/")
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()

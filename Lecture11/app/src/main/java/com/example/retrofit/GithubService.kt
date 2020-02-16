@@ -6,8 +6,8 @@ import retrofit2.http.Path
 
 interface GithubService {
 
-    @GET("users/aggarwalpulkit596")
-    suspend fun getMyUser(): Response<User>
+    @GET("users")
+    suspend fun getMyUser(): Response<List<User>>
 
     @GET("users/{id}")
     suspend fun getUser(@Path("id") id:String): Response<User>
