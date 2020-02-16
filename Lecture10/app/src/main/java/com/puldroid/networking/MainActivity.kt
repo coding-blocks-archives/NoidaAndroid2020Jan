@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val request = Request.Builder()
                 .url("https://jsonplaceholder.typicode.com/photos")
                 .build()
+        
         val list = arrayListOf<Photos>()
         val photoAdapter = PhotoAdapter(list)
         photosRv.apply {

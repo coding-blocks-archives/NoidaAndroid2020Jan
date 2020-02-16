@@ -31,9 +31,10 @@ class PhotoAdapter(val photos: List<Photos>) : RecyclerView.Adapter<PhotosViewHo
 }
 
 class PhotosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    fun bind(photos: Photos) = with(itemView as ShapeableImageView){
-        Picasso.get().load(photos.url).placeholder(R.drawable.ic_launcher_background).into(this)
-        shapeAppearanceModel = shapeAppearanceModel.toBuilder()
+    fun bind(photos: Photos) {
+        val imageView = itemView as ShapeableImageView
+        Picasso.get().load(photos.url).placeholder(R.drawable.ic_launcher_background).into(imageView)
+        imageView.shapeAppearanceModel = imageView.shapeAppearanceModel.toBuilder()
             .setBottomRightCorner(CornerFamily.CUT, 100f)
             .setBottomLeftCorner(CornerFamily.CUT, 100f)
             .setTopLeftCorner(CornerFamily.ROUNDED, 100f)
