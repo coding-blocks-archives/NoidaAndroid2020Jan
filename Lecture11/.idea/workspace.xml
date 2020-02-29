@@ -12,9 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c02ba6c9-64d0-4b08-983a-ccca20534902" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofit/GithubService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofit/GithubService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofit/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofit/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581857803895</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add search user">
+      <created>1581859537522</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581859537522</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +193,8 @@
     <MESSAGE value="add pojo classes" />
     <MESSAGE value="add simple get r" />
     <MESSAGE value="add users list" />
-    <option name="LAST_COMMIT_MESSAGE" value="add users list" />
+    <MESSAGE value="add search user" />
+    <option name="LAST_COMMIT_MESSAGE" value="add search user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
