@@ -1,5 +1,6 @@
 package com.puldroid.misc
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -15,7 +16,7 @@ class ToolbarActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            setTitle("Hello world this is a toolbar")
+            title = "Hello world this is a toolbar"
         }
     }
 
@@ -30,6 +31,7 @@ class ToolbarActivity : AppCompatActivity() {
             true
         }
         R.id.first1 ->{
+            startActivity(Intent(this,NavigationActivity::class.java))
             true
         }
         R.id.first2 ->{
