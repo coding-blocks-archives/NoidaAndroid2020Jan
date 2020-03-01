@@ -13,16 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Button" />
 
-    <fragment
-        android:id="@+id/baseFragment"
-        android:name="com.puldroid.fragments.BlankFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <fragment
-        android:id="@+id/base2fragment"
-
-        android:name="com.puldroid.fragments.DcFragment"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
