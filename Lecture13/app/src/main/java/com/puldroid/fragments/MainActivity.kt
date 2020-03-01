@@ -9,15 +9,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        val bundle = Bundle()
+        bundle.putString("NAME", "Marvel")
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, BlankFragment())
             .commitNow()
         button2.setOnClickListener {
+            bundle.putString("NAME", "DC")
+            val fragment = BlankFragment()
+            fragment.arguments = bundle
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, DcFragment())
+                .replace(R.id.container, fragment)
                 .commitNow()
         }
+
+        button3.setOnClickListener {
+            bundle.putString("NAME", "Marvel")
+            val fragment = BlankFragment()
+            fragment.arguments = bundle
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .commitNow()
+        }
+
 
 //        base2fragment.view?.visibility = View.GONE
 //
