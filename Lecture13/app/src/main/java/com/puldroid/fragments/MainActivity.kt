@@ -9,28 +9,56 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val bundle = Bundle()
-        bundle.putString("NAME", "Marvel")
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, BlankFragment())
-            .commitNow()
-        button2.setOnClickListener {
-            bundle.putString("NAME", "DC")
-            val fragment = BlankFragment()
-            fragment.arguments = bundle
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commitNow()
+
+        val fragment = BlankFragment()
+        fragment.arguments = Bundle().apply { putString("NAME", "Marvel") }
+
+        val fragment1 = BlankFragment()
+        fragment1.arguments = Bundle().apply { putString("NAME", "DC") }
+
+        val fragment2 = BlankFragment()
+        fragment2.arguments = Bundle().apply { putString("NAME", "Marvel") }
+
+        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.apply {
+            add(fragment)
+            add(fragment1)
+            add(fragment2)
+            add(DcFragment())
         }
 
-        button3.setOnClickListener {
-            bundle.putString("NAME", "Marvel")
-            val fragment = BlankFragment()
-            fragment.arguments = bundle
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commitNow()
-        }
+        container.adapter = adapter
+        container.setPageTransformer(true,ZoomOutPageTransformer())
+
+
+
+
+
+
+
+
+
+
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.container, BlankFragment())
+//            .commitNow()
+//        button2.setOnClickListener {
+//            bundle.putString("NAME", "DC")
+//            val fragment = BlankFragment()
+//            fragment.arguments = bundle
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, fragment)
+//                .commitNow()
+//        }
+//
+//        button3.setOnClickListener {
+//            bundle.putString("NAME", "Marvel")
+//            val fragment = BlankFragment()
+//            fragment.arguments = bundle
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.container, fragment)
+//                .commitNow()
+//        }
 
 
 //        base2fragment.view?.visibility = View.GONE
