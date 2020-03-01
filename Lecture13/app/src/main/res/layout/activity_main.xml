@@ -3,12 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <!--   Static Fragment     <-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <fragment
         android:id="@+id/baseFragment"
         android:name="com.puldroid.fragments.BlankFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/base2fragment"
+
+        android:name="com.puldroid.fragments.DcFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
