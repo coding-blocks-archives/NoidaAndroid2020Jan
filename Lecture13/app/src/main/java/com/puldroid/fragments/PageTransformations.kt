@@ -3,7 +3,7 @@ package com.puldroid.fragments
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 
-private const val MIN_SCALE = 0.75f
+private const val MIN_SCALE = 0.05f
 
 class DepthPageTransformer : ViewPager.PageTransformer {
 

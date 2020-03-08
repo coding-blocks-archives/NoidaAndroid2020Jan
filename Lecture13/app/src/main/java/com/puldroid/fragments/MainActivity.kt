@@ -26,9 +26,10 @@ class MainActivity : AppCompatActivity() {
             add(fragment2)
             add(DcFragment())
         }
+        container.currentItem = 2
 
         container.adapter = adapter
-        container.setPageTransformer(true,ZoomOutPageTransformer())
+        container.setPageTransformer(true,DepthPageTransformer())
 
 
 
