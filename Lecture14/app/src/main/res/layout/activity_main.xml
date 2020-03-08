@@ -45,10 +45,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:id="@+id/email"
+            android:hint="Number"
+            android:id="@+id/number"
+            android:maxLength="10"
             android:imeOptions="actionNext"
-            android:inputType="textEmailAddress" />
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,6 +79,16 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:onClick="submit"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:cornerRadius="25dp" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_height="wrap_content"
+        android:text="Submit Otp"
+        android:onClick="VerifyOtp"
         android:textAllCaps="false"
         android:textSize="24sp"
         app:cornerRadius="25dp" />
