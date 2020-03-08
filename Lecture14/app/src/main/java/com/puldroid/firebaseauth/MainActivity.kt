@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,20 +25,37 @@ class MainActivity : AppCompatActivity() {
         if (email.isEmpty() || pass.isEmpty()) {
             return
         } else {
-//            auth.signInWithEmailAndPassword()
             auth.createUserWithEmailAndPassword(email, pass)
                     .addOnSuccessListener {
-                        //Save User Name to FirebaseAuth
-                        val userProfileChangeRequest = UserProfileChangeRequest.Builder()
-                                .setDisplayName(username.text.toString())
-                                .build()
-                        it.user?.updateProfile(userProfileChangeRequest)
-
-
-                        Toast.makeText(this, it.user?.displayName, Toast.LENGTH_LONG).show()
+                        saveName(it)
+                        Toast.makeText(this, "Sign up With " + it.user?.displayName, Toast.LENGTH_LONG).show()
                     }.addOnFailureListener {
-                        Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
+                        if (it.localizedMessage.contains("already", true)) {
+                            login(email, pass)
+                        } else {
+                            Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
+                        }
                     }
         }
     }
+
+    private fun login(email: String, pass: String) {
+        auth.signInWithEmailAndPassword(email, pass)
+                .addOnSuccessListener {
+                    saveName(it)
+                    Toast.makeText(this, "Login With " + it.user?.displayName, Toast.LENGTH_LONG).show()
+                }.addOnFailureListener {
+                    Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
+                }
+    }
+
+    private fun saveName(it: AuthResult) {
+        //Save Name to Firebase Auth
+        val userProfileChangeRequest = UserProfileChangeRequest.Builder()
+                .setDisplayName(username.text.toString())
+                .build()
+        it.user?.updateProfile(userProfileChangeRequest)
+    }
 }
+
+
