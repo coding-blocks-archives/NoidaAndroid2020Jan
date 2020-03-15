@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "344977902793",
+    "firebase_url": "https://fir-auth-ca201.firebaseio.com",
+    "project_id": "fir-auth-ca201",
+    "storage_bucket": "fir-auth-ca201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344977902793:android:a46bd83796023cefead118",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344977902793-d6vuhuboitohnrbc0jqac4ftk0kaln7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatapp",
+            "certificate_hash": "045d03c53b977ce83094ddd639512ed015c8ffc0"
+          }
+        },
+        {
+          "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM3jk_dl2Nw-FBhqZ1R-8kngHBDiNUeg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344977902793:android:3700fe44f8f077c8ead118",
+        "android_client_info": {
+          "package_name": "com.puldroid.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344977902793-j7ohp8qrp4ghmit3400lm37c555n891b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.puldroid.firebaseauth",
+            "certificate_hash": "045d03c53b977ce83094ddd639512ed015c8ffc0"
+          }
+        },
+        {
+          "client_id": "344977902793-5cl0docum0dgqaik6qn58qj5meneobcb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.puldroid.firebaseauth",
+            "certificate_hash": "a5a4ae3a97252f9da9c3954c098bb02fb455551b"
+          }
+        },
+        {
+          "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM3jk_dl2Nw-FBhqZ1R-8kngHBDiNUeg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344977902793:android:3fb89d8e315cc491ead118",
+        "android_client_info": {
+          "package_name": "com.pulkit.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM3jk_dl2Nw-FBhqZ1R-8kngHBDiNUeg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344977902793-2qoht7pe803vm9tq4s100eib9379uu14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
