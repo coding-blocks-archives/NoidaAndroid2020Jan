@@ -1,5 +1,6 @@
 package com.pulkit.chatapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        auth.addAuthStateListener {
+            if(it.currentUser != null){
+                startActivity(Intent(this,ChatActivity::class.java))
+            }
+        }
     }
 
     fun submit(view: View) {
@@ -29,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         saveName(it)
                         Toast.makeText(this, "Sign up With " + it.user?.displayName, Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this,ChatActivity::class.java))
                     }.addOnFailureListener {
                         if (it.localizedMessage.contains("already", true)) {
                             login(email, pass)
@@ -44,6 +52,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnSuccessListener {
                     saveName(it)
                     Toast.makeText(this, "Login With " + it.user?.displayName, Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this,ChatActivity::class.java))
                 }.addOnFailureListener {
                     Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
                 }
