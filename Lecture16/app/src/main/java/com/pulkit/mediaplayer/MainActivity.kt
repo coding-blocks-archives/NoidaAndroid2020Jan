@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        StrictMode.setThreadPolicy(
-                StrictMode.ThreadPolicy.Builder()
-                        .detectAll()
-                        .penaltyDeath()
-                        .build()
-        )
+//        StrictMode.setThreadPolicy(
+//                StrictMode.ThreadPolicy.Builder()
+//                        .detectAll()
+//                        .penaltyDeath()
+//                        .build()
+//        )
 
         mediaBtn.setOnClickListener {
             startActivity(Intent(this,MediaPlayerActivity::class.java))
