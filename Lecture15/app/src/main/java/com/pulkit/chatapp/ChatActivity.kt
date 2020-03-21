@@ -59,6 +59,7 @@ class ChatActivity : AppCompatActivity() {
                 val msg = data.getValue(Message::class.java)
                 msg?.let { list.add(it) }
                 adapter.swapData(list)
+                messageRv.scrollToPosition(list.size - 1)
 
             }
 
@@ -69,7 +70,11 @@ class ChatActivity : AppCompatActivity() {
     }
 
     fun sendMsg(v: View) {
-        val msg = Message(auth.currentUser?.displayName.toString(),msgInp.editText?.text.toString(),System.currentTimeMillis())
+        val msg = Message(
+            auth.currentUser?.displayName.toString(),
+            msgInp.editText?.text.toString(),
+            System.currentTimeMillis()
+        )
         db.child("messages").push().setValue(msg)
     }
 }
