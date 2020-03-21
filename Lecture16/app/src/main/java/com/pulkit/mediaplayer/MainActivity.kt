@@ -1,5 +1,6 @@
 package com.pulkit.mediaplayer
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
@@ -17,7 +18,7 @@ import java.io.File
 
 
 const val WRITE_PER_CODE = 123
-const val READ_PER_CODE = 123
+const val READ_PER_CODE = 456
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
                         .penaltyDeath()
                         .build()
         )
+
+        mediaBtn.setOnClickListener {
+            startActivity(Intent(this,MediaPlayerActivity::class.java))
+        }
 
         button.setOnClickListener {
             val perm = ActivityCompat.checkSelfPermission(
