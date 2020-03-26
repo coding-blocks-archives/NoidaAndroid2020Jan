@@ -8,6 +8,11 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.WorkerParameters
+import androidx.work.workDataOf
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +29,22 @@ class MainActivity : AppCompatActivity() {
 //
 //        localBroadcastManager.sendBroadcast(localIntent)
         setUpAlarm()
+        setWorkerRequest()
+    }
+
+    private fun setWorkerRequest() {
+        val inputData = workDataOf(
+            "title" to "Hello"
+        )
+
+        val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
+            .setInitialDelay(20,TimeUnit.SECONDS)
+            .setInputData(inputData)
+            .build()
+
+        WorkManager.getInstance(this).enqueue(workRequest)
+
+
     }
 
     private fun setUpAlarm() {
