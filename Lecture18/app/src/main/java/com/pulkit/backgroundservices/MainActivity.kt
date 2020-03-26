@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val localBroadcastManager = LocalBroadcastManager.getInstance(this)
 
+        val localIntent = Intent("com.puldroid.myaction")
+                .putExtra("name","Pulkit")
+        localBroadcastManager.registerReceiver(receiver, IntentFilter("com.puldroid.myaction"))
+
+        localBroadcastManager.sendBroadcast(localIntent)
     }
 
     override fun onStart() {
