@@ -49,7 +49,7 @@ class SensorActivity : AppCompatActivity() {
     }
 
     private fun accelToColor(ax: Float, ay: Float, az: Float): Int {
-        // -12 to +12
+        // -9.8 to +9.8
         val R = (((ax + 12) / 24) * 255).toInt()
         val G = (((ay + 12) / 24) * 255).toInt()
         val B = (((az + 12) / 24) * 255).toInt()
