@@ -1,5 +1,8 @@
 package com.pulkit.backgroundservices
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
@@ -13,13 +16,28 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val localBroadcastManager = LocalBroadcastManager.getInstance(this)
+//        val localBroadcastManager = LocalBroadcastManager.getInstance(this)
+//
+//        val localIntent = Intent("com.puldroid.myaction")
+//                .putExtra("name", "Pulkit")
+//        localBroadcastManager.registerReceiver(receiver, IntentFilter("com.puldroid.myaction"))
+//
+//        localBroadcastManager.sendBroadcast(localIntent)
+        setUpAlarm()
+    }
 
-        val localIntent = Intent("com.puldroid.myaction")
-                .putExtra("name","Pulkit")
-        localBroadcastManager.registerReceiver(receiver, IntentFilter("com.puldroid.myaction"))
+    private fun setUpAlarm() {
+        val alrMgr = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-        localBroadcastManager.sendBroadcast(localIntent)
+        val intent = Intent(this, MyBroadcastReceiver::class.java)
+        intent.putExtra("name", "This is some name")
+
+        val pendingIntent = PendingIntent.getBroadcast(
+                this, 0, intent, PendingIntent.FLAG_ONE_SHOT
+        )
+
+        alrMgr.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 30000, pendingIntent)
+
     }
 
     override fun onStart() {
