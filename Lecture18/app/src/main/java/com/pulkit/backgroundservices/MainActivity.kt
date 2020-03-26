@@ -8,10 +8,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
-import androidx.work.WorkerParameters
-import androidx.work.workDataOf
+import androidx.work.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -30,15 +27,46 @@ class MainActivity : AppCompatActivity() {
 //        localBroadcastManager.sendBroadcast(localIntent)
         setUpAlarm()
         setWorkerRequest()
+        setRepeatingRequest()
     }
 
+    private fun setRepeatingRequest() {
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .setRequiresCharging(true)
+            .setRequiresDeviceIdle(false)
+            .setRequiresStorageNotLow(false)
+            .setRequiresBatteryNotLow(false)
+            .build()
+
+        val inputData = workDataOf(
+            "title" to "Hello"
+        )
+
+        val workRequest = PeriodicWorkRequestBuilder<NotificationWorker>(1,TimeUnit.DAYS)
+//            .setInitialDelay(20,TimeUnit.SECONDS)
+            .setConstraints(constraints)
+            .setInputData(inputData)
+            .build()
+
+        WorkManager.getInstance(this).enqueue(workRequest)    }
+
     private fun setWorkerRequest() {
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .setRequiresCharging(true)
+            .setRequiresDeviceIdle(false)
+            .setRequiresStorageNotLow(false)
+            .setRequiresBatteryNotLow(false)
+            .build()
+
         val inputData = workDataOf(
             "title" to "Hello"
         )
 
         val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
-            .setInitialDelay(20,TimeUnit.SECONDS)
+//            .setInitialDelay(20,TimeUnit.SECONDS)
+            .setConstraints(constraints)
             .setInputData(inputData)
             .build()
 
