@@ -11,7 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02ba6c9-64d0-4b08-983a-ccca20534902" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/data/api/Client.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/data/api/GithubService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/data/models/Response.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/data/models/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/adapter/UserAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/view/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/res/layout/item_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture18/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture18/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +31,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="2d80c4c7" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -59,6 +71,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-16T13:22:35.445Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -183,7 +196,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
