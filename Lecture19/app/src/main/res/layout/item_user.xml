@@ -19,8 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_weight="1"
-        android:fontFamily="cursive"
-        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         tools:text="TextView" />
 </LinearLayout>

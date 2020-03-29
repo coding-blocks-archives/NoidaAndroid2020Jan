@@ -13,14 +13,26 @@ class GithubViewModel : ViewModel() {
     init {
         fetchApiUser()
     }
+
     val users = MutableLiveData<List<User>>()
 
-    private fun fetchApiUser() {
+    fun fetchApiUser() {
         viewModelScope.launch(Dispatchers.IO) {
             val response = GithubRepository.fetchUsers()
-            if(response.isSuccessful){
+            if (response.isSuccessful) {
                 response.body()?.let {
                     users.postValue(it)
+                }
+            }
+        }
+    }
+
+    fun searchUser(name: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val response = GithubRepository.searchUsers(name)
+            if (response.isSuccessful) {
+                response.body()?.let {
+                    users.postValue(it.items)
                 }
             }
         }

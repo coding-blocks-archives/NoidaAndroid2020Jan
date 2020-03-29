@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.retrofit.User
 import com.pulkit.mvvm.R
+import com.pulkit.mvvm.utils.string.SpannableLanguage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_user.view.*
 
@@ -26,7 +27,7 @@ class UserAdapter(val data: List<User>) : RecyclerView.Adapter<UserAdapter.UserV
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: User) = with(itemView) {
-            textView.text = item.login
+            textView.text = item.login?.let { SpannableLanguage(context, it) }
             Picasso.get().load(item.avatarUrl).into(imageView)
         }
     }

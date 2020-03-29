@@ -39,12 +39,18 @@ class MainActivity : AppCompatActivity() {
         searchView.isSubmitButtonEnabled = true
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                query?.let { searchUsers(it) }
+                query?.let {
+                    list.clear()
+                    vm.searchUser(it)
+                }
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let { searchUsers(it) }
+                newText?.let {
+                    list.clear()
+                    vm.searchUser(it)
+                }
 
                 return true
             }
@@ -63,29 +69,5 @@ class MainActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
         })
-
-//        GlobalScope.launch(Dispatchers.Main) {
-//            val response = withContext(Dispatchers.IO) { Client.api.getMyUser() }
-//            if (response.isSuccessful) {
-//                response.body()?.let {
-//                    originalList.addAll(it)
-//                    list.addAll(it)
-//                    adapter.notifyDataSetChanged()
-//                }
-//            }
-//        }
-    }
-
-    private fun searchUsers(query: String) {
-        GlobalScope.launch(Dispatchers.Main) {
-            val response = withContext(Dispatchers.IO) { Client.api.searchUser(query) }
-            if (response.isSuccessful) {
-                response.body()?.let {
-                    list.clear()
-                    list.addAll(it.items)
-                    adapter.notifyDataSetChanged()
-                }
-            }
-        }
     }
 }

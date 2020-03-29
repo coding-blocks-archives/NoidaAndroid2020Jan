@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02ba6c9-64d0-4b08-983a-ccca20534902" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/data/repos/GithubRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/viewmodel/GithubViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/utils/string/SpannableLanguage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/adapter/UserAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/adapter/UserAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/view/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/viewmodel/GithubViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/java/com/pulkit/mvvm/ui/viewmodel/GithubViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture19/app/src/main/res/layout/item_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture19/app/src/main/res/layout/item_user.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
