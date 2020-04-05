@@ -11,9 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02ba6c9-64d0-4b08-983a-ccca20534902" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/retrofit/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/retrofit/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +46,9 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -50,8 +56,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="app" />
     <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
     <property name="DEBUGGABLE_PROCESS" value="com.example.retrofit" />
     <property name="DEBUGGER_ID" value="Auto" />
@@ -65,19 +77,58 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android JUnit.ExampleUnitTest.findUser">
+    <configuration name="ExampleUnitTest.checkMyUser" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.retrofit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.retrofit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.retrofit.ExampleUnitTest" />
+      <option name="METHOD_NAME" value="checkMyUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExampleUnitTest.checkUser" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.retrofit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.retrofit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.retrofit.ExampleUnitTest" />
+      <option name="METHOD_NAME" value="checkUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExampleUnitTest.findUser" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.retrofit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.retrofit" />
+      <option name="MAIN_CLASS_NAME" value="com.example.retrofit.ExampleUnitTest" />
+      <option name="METHOD_NAME" value="findUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -136,6 +187,13 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.ExampleUnitTest.findUser" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.checkMyUser" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.checkUser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -199,6 +257,40 @@
     <MESSAGE value="add search user" />
     <option name="LAST_COMMIT_MESSAGE" value="add search user" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1618" height="269" key="GridCell.Tab.0.bottom" timestamp="1586075093930">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="269" key="GridCell.Tab.0.bottom/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586075093930" />
+    <state width="1618" height="269" key="GridCell.Tab.0.center" timestamp="1586075093928">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="269" key="GridCell.Tab.0.center/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586075093928" />
+    <state width="1618" height="269" key="GridCell.Tab.0.left" timestamp="1586075093926">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="269" key="GridCell.Tab.0.left/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586075093926" />
+    <state width="1618" height="269" key="GridCell.Tab.0.right" timestamp="1586075093929">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="269" key="GridCell.Tab.0.right/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586075093929" />
+    <state width="1618" height="326" key="GridCell.Tab.1.bottom" timestamp="1586074952161">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="326" key="GridCell.Tab.1.bottom/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586074952161" />
+    <state width="1618" height="326" key="GridCell.Tab.1.center" timestamp="1586074952159">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="326" key="GridCell.Tab.1.center/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586074952159" />
+    <state width="1618" height="326" key="GridCell.Tab.1.left" timestamp="1586074952158">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="326" key="GridCell.Tab.1.left/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586074952158" />
+    <state width="1618" height="326" key="GridCell.Tab.1.right" timestamp="1586074952160">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1618" height="326" key="GridCell.Tab.1.right/-1600.0.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1586074952160" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -209,6 +301,21 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/example/retrofit/ExampleUnitTest.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/example/retrofit/ExampleUnitTest.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/example/retrofit/ExampleUnitTest.kt</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
