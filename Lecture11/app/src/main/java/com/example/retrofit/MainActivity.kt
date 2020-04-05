@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -15,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     val list = arrayListOf<User>()
     val originalList = arrayListOf<User>()
     val adapter = UserAdapter(list)
+
+    private val mAppUnitId: String by lazy {
+        "ca-app-pub-9111733988327203~5124718766"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +62,23 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        initializeBannerAd(mAppUnitId)
+
+        loadBannerAd()
+    }
+
+    private fun initializeBannerAd(appUnitId: String) {
+
+        MobileAds.initialize(this, appUnitId)
+
+    }
+
+    private fun loadBannerAd() {
+
+        val adRequest = AdRequest.Builder()
+            .build()
+        adView.loadAd(adRequest)
     }
 
     private fun searchUsers(query: String) {
